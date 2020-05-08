@@ -40,8 +40,7 @@ class User extends Component {
                   <svg
                     onClick={this.onDeleteEvent.bind(this, dispatch)}
                     style={
-                      ({ cursor: 'pointer' },
-                      isVisible ? { color: 'red' } : null)
+                      isVisible ? { color: 'red', transition: '1000ms' } : null
                     }
                     className="bi bi-trash"
                     width="1.3em"
@@ -63,7 +62,10 @@ class User extends Component {
                     className="card-body"
                     style={
                       isVisible
-                        ? { backgroundColor: '#62848d', color: '#ffffff' }
+                        ? {
+                            backgroundColor: '#18cac7',
+                            color: '#ffffff',
+                          }
                         : null
                     }
                   >
@@ -83,6 +85,6 @@ User.propTypes = {
   name: PropTypes.string.isRequired,
   salary: PropTypes.string.isRequired,
   department: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 export default User;
