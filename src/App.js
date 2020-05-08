@@ -12,7 +12,7 @@ class App extends Component {
       <div className="container">
         <Navbar title="User App" />
         <hr />
-        <Denemehooks></Denemehooks>
+        <Denemehooks />
         <hr />
         <AddUser />
         <Users />
