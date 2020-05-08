@@ -1,28 +1,22 @@
 {
   "users": [
     {
-      "id": "1",
+      "name": "Severus Snipe",
+      "salary": "9000",
+      "department": "Slytherin",
+      "id": "jhToLFg"
+    },
+    {
       "name": "Gökhan Öztürk",
-      "salary": "6000",
-      "department": "Bilişim"
+      "salary": "10000",
+      "department": "Bilişim",
+      "id": "0ZnPGrS"
     },
     {
-      "id": "2",
       "name": "Yakup Öztürk",
-      "salary": "7000",
-      "department": "Pazarlama"
-    },
-    {
-      "id": "3",
-      "name": "Halime Öztürk",
-      "salary": "8000",
-      "department": "İnsan Kaynakları"
-    },
-    {
-      "id": "4",
-      "name": "Fadime Öztürk",
-      "salary": "8000",
-      "department": "İnsan Kaynakları"
+      "salary": "2000",
+      "department": "Amele",
+      "id": "Lq57Lqt"
     }
   ]
 }

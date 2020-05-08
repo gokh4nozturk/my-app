@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import UserConsumer from '../context';
+import axios from 'axios';
 
 class User extends Component {
   state = {
@@ -16,8 +17,9 @@ class User extends Component {
       isVisible: !this.state.isVisible,
     });
   };
-  onDeleteEvent = (dispatch, e) => {
+  onDeleteEvent = async (dispatch, e) => {
     const { id } = this.props;
+    await axios.delete(`http://localhost:3004/users/${id}`);
     //Consumer Dispatch
     dispatch({ type: 'DELETE_USER', payload: id });
   };
@@ -63,8 +65,11 @@ class User extends Component {
                     style={
                       isVisible
                         ? {
-                            backgroundColor: '#18cac7',
+                            backgroundColor: 'black',
                             color: '#ffffff',
+                            borderRadius: '5px',
+                            margin: '5px',
+                            boxShadow: '3px 3px 3px 2px rgba(0, 0, 0, 0.6)',
                           }
                         : null
                     }
