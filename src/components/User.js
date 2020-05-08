@@ -39,7 +39,10 @@ class User extends Component {
                   </h4>
                   <svg
                     onClick={this.onDeleteEvent.bind(this, dispatch)}
-                    style={{ cursor: 'pointer' }}
+                    style={
+                      ({ cursor: 'pointer' },
+                      isVisible ? { color: 'red' } : null)
+                    }
                     className="bi bi-trash"
                     width="1.3em"
                     height="1.3em"
@@ -56,7 +59,14 @@ class User extends Component {
                   </svg>
                 </div>
                 {isVisible ? (
-                  <div className="card-body">
+                  <div
+                    className="card-body"
+                    style={
+                      isVisible
+                        ? { backgroundColor: '#62848d', color: '#ffffff' }
+                        : null
+                    }
+                  >
                     <p className="card-text">Departmant : {department}</p>
                     <p className="card-text">Salary : {salary}</p>
                   </div>
